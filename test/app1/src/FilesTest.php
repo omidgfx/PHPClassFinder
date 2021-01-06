@@ -5,10 +5,11 @@ namespace TestApp1;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use HaydenPierce\ClassFinder\ClassFinder;
+use PHPUnit\Framework\TestCase;
 
-class FilesTest extends \PHPUnit_Framework_TestCase
+class FilesTest extends TestCase
 {
-    public function setup()
+    public function setup(): void
     {
         // Reset ClassFinder back to normal.
         ClassFinder::setAppRoot(null);

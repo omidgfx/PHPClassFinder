@@ -4,8 +4,9 @@ namespace HaydenPierce\ClassFinder\UnitTest\Classmap;
 
 use HaydenPierce\ClassFinder\ClassFinder;
 use HaydenPierce\ClassFinder\Classmap\ClassmapEntry;
+use PHPUnit\Framework\TestCase;
 
-class ClassmapEntryTest extends \PHPUnit_Framework_TestCase
+class ClassmapEntryTest extends TestCase
 {
     public function testKnowsNamespace()
     {

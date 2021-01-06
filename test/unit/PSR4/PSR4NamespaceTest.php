@@ -5,13 +5,14 @@ namespace HaydenPierce\ClassFinder\UnitTest\PSR4;
 use HaydenPierce\ClassFinder\PSR4\PSR4Namespace;
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
+use PHPUnit\Framework\TestCase;
 
-class PSR4NamespaceTest extends \PHPUnit_Framework_TestCase
+class PSR4NamespaceTest extends TestCase
 {
     /** @var vfsStreamDirectory */
     private $root;
 
-    public function setUp()
+    public function setUp(): void
     {
         $structure = $this->getTestStructure();
         $this->root = vfsStream::setup('root', null, $structure);

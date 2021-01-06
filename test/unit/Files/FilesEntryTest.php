@@ -5,12 +5,13 @@ namespace HaydenPierce\ClassFinder\UnitTest\Files;
 use HaydenPierce\ClassFinder\Files\FilesEntry;
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
+use PHPUnit\Framework\TestCase;
 
-class FilesEntryTest extends \PHPUnit_Framework_TestCase
+class FilesEntryTest extends TestCase
 {
     private $file;
 
-    public function setUp()
+    public function setUp(): void
     {
         /*
          * A temporary file is used here due to the nature of the FilesEntry. Because FilesEntry must include a PHP file
