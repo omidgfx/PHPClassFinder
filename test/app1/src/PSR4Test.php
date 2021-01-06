@@ -5,10 +5,11 @@ namespace TestApp1;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use HaydenPierce\ClassFinder\ClassFinder;
+use PHPUnit\Framework\TestCase;
 
-class PSR4Test extends \PHPUnit_Framework_TestCase
+class PSR4Test extends TestCase
 {
-    public function setup()
+    public function setup(): void
     {
         // Reset ClassFinder back to normal.
         ClassFinder::setAppRoot(null);
@@ -187,7 +188,7 @@ class PSR4Test extends \PHPUnit_Framework_TestCase
 
     public function testForClassesInNamespace()
     {
-        $this->assertFalse(ClassFinder::namespaceHasClasses('DoesNotExist'));
+        $this->assertFalse(ClassFinder::namespaceHasClasses('DoesNotExistInAnyNamespaces'));
         $this->assertTrue(ClassFinder::namespaceHasClasses('HaydenPierce\ClassFinder'));
     }
 
