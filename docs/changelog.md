@@ -1,3 +1,8 @@
+Version 0.4.3
+----------
+
+* ([Merge Request](https://gitlab.com/hpierce1102/ClassFinder/-/merge_requests/22)) Updated testing harness to use PHPUnit 9.5.0 and PHP 8.0. No functional changes.
+
 Version 0.4.2
 ----------
 
