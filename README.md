@@ -19,7 +19,7 @@ Installing
 Installing is done by requiring it with Composer.
 
 ```
-$ composer require haydenpierce/class-finder
+composer require haydenpierce/class-finder
 ```
 
 No other installation methods are currently supported.
@@ -30,9 +30,9 @@ Supported Autoloading Methods
 | Method     | Supported | with `ClassFinder::RECURSIVE_MODE` |
 | ---------- | --------- | ---------------------------------- |
 | PSR-4      | ✔️     | ✔️                               |
-| PSR-0      | ❌️*    | ❌️*                              |
+| PSR-0      | ❌️*   | ❌️*                             |
 | Classmap   | ✔️     | ✔️                               |
-| Files      | ✔️^    | ❌️**                             |
+| Files      | ✔️^    | ❌️**                            |
 
 \^ Experimental.
 
@@ -45,7 +45,7 @@ Examples
 
 **Standard Mode**
 
-```
+```php
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -64,7 +64,7 @@ var_dump($classes);
 
 **Recursive Mode** *(in v0.3-beta)*
 
-```
+```php
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
