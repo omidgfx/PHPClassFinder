@@ -16,7 +16,7 @@ class PSR4NamespaceFactory
     }
 
     /**
-     * @return string[]
+     * @return PSR4Namespace[]
      */
     public function getPSR4Namespaces()
     {
