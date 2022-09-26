@@ -1,3 +1,9 @@
+Version 0.4.4
+----------
+
+* ([Merge Request](https://gitlab.com/hpierce1102/ClassFinder/-/merge_requests/23)) Improvements to the readme for copy/pasting and Packagist. Thanks, tacman1
+* ([Merge Request](https://gitlab.com/hpierce1102/ClassFinder/-/merge_requests/24)) Fixed a type hint for an internally used function. Thanks, tacman1
+
 Version 0.4.3
 ----------
 
