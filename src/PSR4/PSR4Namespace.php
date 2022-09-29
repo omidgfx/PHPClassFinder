@@ -171,7 +171,7 @@ class PSR4Namespace
         $relativePath = substr($namespace, strlen($this->namespace));
 
         $self = $this;
-        $directories = array_reduce($this->directories, function($carry, $directory) use ($relativePath, $namespace, $self){
+        $directories = array_reduce($this->directories, function($carry, $directory) use ($relativePath, $self){
             $path = $self->normalizePath($directory, $relativePath);
             $realDirectory = realpath($path);
             if ($realDirectory !== false) {
@@ -233,7 +233,7 @@ class PSR4Namespace
         }, array());
 
         $selfNamespace = $this->namespace; // PHP 5.3 BC
-        $potentialClasses = array_map(function($file) use ($self, $selfNamespace) {
+        $potentialClasses = array_map(function($file) use ($selfNamespace) {
             return $selfNamespace . str_replace('.php', '', $file);
         }, $potentialClassFiles);
 
