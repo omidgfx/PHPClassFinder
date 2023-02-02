@@ -8,6 +8,8 @@ class AppConfig
 {
     /** @var string */
     private $appRoot;
+    /** @var bool */
+    public $ignorePSR4Vendors = false;
 
     public function __construct()
     {
