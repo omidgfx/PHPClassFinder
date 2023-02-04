@@ -1,3 +1,8 @@
+Version 0.5.0
+----------
+
+* ([Merge Request](https://gitlab.com/hpierce1102/ClassFinder/-/merge_requests/26)) Added `ClassFinder::disablePSR4Vendors` and `ClassFinder::enablePSR4Vendors()`, Thanks Jason Gill
+
 Version 0.4.4
 ----------
 
