@@ -50,6 +50,7 @@ Examples
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+ClassFinder::disablePSR4Vendors();
 $classes = ClassFinder::getClassesInNamespace('TestApp1\Foo');
 
 /**
@@ -69,6 +70,7 @@ var_dump($classes);
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+ClassFinder::disablePSR4Vendors();
 $classes = ClassFinder::getClassesInNamespace('TestApp1\Foo', ClassFinder::RECURSIVE_MODE);
 
 /**
@@ -86,6 +88,15 @@ $classes = ClassFinder::getClassesInNamespace('TestApp1\Foo', ClassFinder::RECUR
  */
 var_dump($classes);
 ```
+
+Performance
+-----------
+
+Most applications and libraries rely on PSR4 to autoload classes. To detect these classes, ClassFinder scans your 
+application's files to check for classes in various directories. By default, ClassFinder will also scan 3rd party classes
+in the vendor directory to locate potential classes in the provided namespace. This can be terribly slow if your application
+has lots of 3rd party code. You can preemptively ignore these classes with `ClassFinder:disablePSR4Vendors()` - when this is
+called, subsequent calls to `ClassFinder::getClassesInNamespace()` will skip scanning anything in the vendor directory.
  
 Documentation
 -------------
