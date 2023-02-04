@@ -140,6 +140,24 @@ class ClassFinder
     /**
      * @return void
      */
+    public static function disablePSR4Vendors()
+    {
+      self::initialize();
+      self::$config->ignorePSR4Vendors = true;
+    }
+
+    /**
+     * @return void
+     */
+    public static function enablePSR4Vendors()
+    {
+      self::initialize();
+      self::$config->ignorePSR4Vendors = false;
+    }
+
+    /**
+     * @return void
+     */
     public static function enableClassmapSupport()
     {
         self::$useClassmapSupport = true;

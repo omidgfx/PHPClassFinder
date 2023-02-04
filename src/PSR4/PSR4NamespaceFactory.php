@@ -21,10 +21,10 @@ class PSR4NamespaceFactory
     public function getPSR4Namespaces()
     {
         $namespaces = $this->getUserDefinedPSR4Namespaces();
-        $vendorNamespaces = require($this->appConfig->getAppRoot() . 'vendor/composer/autoload_psr4.php');
-
-        $namespaces = array_merge($vendorNamespaces, $namespaces);
-
+        if (!$this->appConfig->ignorePSR4Vendors) {
+            $vendorNamespaces = require($this->appConfig->getAppRoot() . 'vendor/composer/autoload_psr4.php');
+            $namespaces = array_merge($vendorNamespaces, $namespaces);
+        }
         // There's some wackiness going on here for PHP 5.3 compatibility.
         $names = array_keys($namespaces);
         $directories = array_values($namespaces);
