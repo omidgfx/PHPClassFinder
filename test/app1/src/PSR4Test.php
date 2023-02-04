@@ -104,6 +104,16 @@ class PSR4Test extends TestCase
         );
     }
 
+    public function testDisablePSR4Vendors()
+    {
+        ClassFinder::disablePSR4Vendors();
+        $classes = ClassFinder::getClassesInNamespace("PhpParser");
+        ClassFinder::enablePSR4Vendors();
+
+
+        $this->assertEquals([], $classes, 'disablePSR4Vendors should cause 3rd party code that rely on PSR4 to autoload classes not to return any classes.');
+    }
+
     /**
      * @dataProvider getClassesInNamespaceRecursivelyDataProvider
      */
