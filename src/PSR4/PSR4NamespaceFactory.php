@@ -44,15 +44,8 @@ class PSR4NamespaceFactory
         $appRoot = $this->appConfig->getAppRoot();
 
         $composerJsonPath = $appRoot . 'composer.json';
-        $composerConfig = json_decode(file_get_contents($composerJsonPath));
-
-        if (!isset($composerConfig->autoload)) {
-            return array();
-        }
-
-        //Apparently PHP doesn't like hyphens, so we use variable variables instead.
-        $psr4 = "psr-4";
-        return (array)$composerConfig->autoload->$psr4;
+        $composerConfig = json_decode(file_get_contents($composerJsonPath), true);
+        return isset($composerConfig['autoload']['psr-4']) ? (array)$composerConfig['autoload']['psr-4'] : array();
     }
 
     /**
