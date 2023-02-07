@@ -1,3 +1,8 @@
+Version 0.5.1
+----------
+
+* ([Merge Request](https://gitlab.com/hpierce1102/ClassFinder/-/merge_requests/28)) Prevent a notice level error in cases where the `psr-4` key isn't defined in an application's composer.json file., Thanks Jason Gill
+
 Version 0.5.0
 ----------
 
