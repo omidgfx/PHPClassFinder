@@ -79,7 +79,7 @@ class ClassFinder
             return array_merge($carry, $finder->findClasses($namespace, $options));
         }, array());
 
-        return array_unique($classes);
+        return array_values(array_unique($classes));
     }
 
     /**

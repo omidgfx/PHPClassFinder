@@ -23,7 +23,7 @@ class PSR4NamespaceFactory
         $namespaces = $this->getUserDefinedPSR4Namespaces();
         if (!$this->appConfig->ignorePSR4Vendors) {
             $vendorNamespaces = require($this->appConfig->getAppRoot() . 'vendor/composer/autoload_psr4.php');
-            $namespaces = array_merge($vendorNamespaces, $namespaces);
+            $namespaces = array_merge_recursive($vendorNamespaces, $namespaces);
         }
         // There's some wackiness going on here for PHP 5.3 compatibility.
         $names = array_keys($namespaces);
