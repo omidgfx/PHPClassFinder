@@ -1,3 +1,8 @@
+Version 0.5.2
+----------
+
+* ([Merge Request](https://gitlab.com/hpierce1102/ClassFinder/-/merge_requests/29)) Fixed a bug where a user's first party classes and vendor provided classes could not both be discovered when using the same namespace
+
 Version 0.5.1
 ----------
 
