@@ -52,7 +52,7 @@ class AppConfig
      */
     private function throwIfInvalidAppRoot($appRoot)
     {
-        if (!file_exists($appRoot . '/composer.json')) {
+        if (!file_exists($appRoot . 'composer.json')) {
             throw new ClassFinderException(sprintf("Could not locate composer.json. You can get around this by setting ClassFinder::\$appRoot manually. See '%s' for details.",
                 'https://gitlab.com/hpierce1102/ClassFinder/blob/master/docs/exceptions/missingComposerConfig.md'
             ));
