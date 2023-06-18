@@ -1,3 +1,9 @@
+Version 0.5.3
+----------
+
+* ([Merge Request](https://gitlab.com/hpierce1102/ClassFinder/-/merge_requests/30)) Improved support for .phar files. Thanks Sean Hamlin
+
+
 Version 0.5.2
 ----------
 
